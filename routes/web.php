@@ -13,5 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('pages.home', 'Testcontroller@home')
-    ->name('home');
+
+Route::get('/home', 'TestController@employees')
+    ->name('employees');
+
+Route::get('/edit/{id}', 'TestController@edit')
+    ->name('edit');
+
+
+Route::post('update/{id}', 'TestController@update')
+    ->name('update-employee');
